@@ -727,15 +727,20 @@ h6 {
     transition-delay: 0 !important;
   }
 }
-/* Adjust image size for mobile */
-@media (max-width: 768px) {
-  .hero img, 
-  .about img, 
-  .values .card img, 
-  .features img {
-    width: 100%;  /* Set width to 100% */
+/* Style for the image in desktop view */
+@media (min-width: 768px) {
+  .responsive-image {
+    width: 80%; /* Use 80% width on desktop */
+    height: auto;
+  }
+}
+
+/* Style for the image in mobile view */
+@media (max-width: 767px) {
+  .responsive-image {
+    width: 100%; /* Full width on mobile */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure image covers space */
+    object-fit: cover; /* Ensure the image covers the container */
   }
 }
 
