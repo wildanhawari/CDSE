@@ -727,7 +727,28 @@ h6 {
     transition-delay: 0 !important;
   }
 }
+/* Adjust image size for mobile */
+@media (max-width: 768px) {
+  .hero img, 
+  .about img, 
+  .values .card img, 
+  .features img {
+    width: 100%;  /* Set width to 100% */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers space */
+  }
+}
 
+/* Ensure full screen for some specific sections */
+.hero {
+  overflow: hidden; /* Prevents overflow outside the container */
+}
+
+.about img, 
+.values .card img, 
+.features img {
+  max-width: unset; /* Reset max-width */
+}
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
