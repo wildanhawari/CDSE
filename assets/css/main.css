@@ -1018,6 +1018,7 @@ section,
 /*--------------------------------------------------------------
 # Values Section
 --------------------------------------------------------------*/
+
 .values .card {
   background-color: var(--surface-color);
   color: var(--default-color);
@@ -1027,6 +1028,11 @@ section,
   transition: 0.3s;
   height: 100%;
   border: 0;
+}
+
+.values .row {
+  display: flex; /* Use Flexbox for the row */
+  justify-content: center; /* Center the card horizontally */
 }
 
 .values .card img {
@@ -1693,9 +1699,16 @@ section,
   transition: 0.3s;
 }
 
+.team .row {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
+  
 }
 
 .team .team-member .member-img:after {
