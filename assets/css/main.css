@@ -727,7 +727,33 @@ h6 {
     transition-delay: 0 !important;
   }
 }
+/* Style for the image in desktop view */
+@media (min-width: 768px) {
+  .responsive-image {
+    width: 80%; /* Use 80% width on desktop */
+    height: auto;
+  }
+}
 
+/* Style for the image in mobile view */
+@media (max-width: 767px) {
+  .responsive-image {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+}
+
+/* Ensure full screen for some specific sections */
+.hero {
+  overflow: hidden; /* Prevents overflow outside the container */
+}
+
+.about img, 
+.values .card img, 
+.features img {
+  max-width: unset; /* Reset max-width */
+}
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
@@ -992,6 +1018,7 @@ section,
 /*--------------------------------------------------------------
 # Values Section
 --------------------------------------------------------------*/
+
 .values .card {
   background-color: var(--surface-color);
   color: var(--default-color);
@@ -1001,6 +1028,11 @@ section,
   transition: 0.3s;
   height: 100%;
   border: 0;
+}
+
+.values .row {
+  display: flex; /* Use Flexbox for the row */
+  justify-content: center; /* Center the card horizontally */
 }
 
 .values .card img {
@@ -1667,9 +1699,16 @@ section,
   transition: 0.3s;
 }
 
+.team .row {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
+  
 }
 
 .team .team-member .member-img:after {
