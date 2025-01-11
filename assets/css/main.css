@@ -1029,7 +1029,42 @@ section,
   height: 100%;
   border: 0;
 }
+.values .btn-read-more {
+  display: block; /* Mengubah menjadi block agar tombol mengisi seluruh ruang */
+  width: 100%;    /* Tombol lebih lebar */
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Menambahkan margin auto untuk menempatkan tombol di tengah */
+}
 
+
+.values .btn-read-more span {
+  font-family: var(--default-font);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  white-space: nowrap; /* Mencegah pemotongan teks */
+}
+
+.values .btn-read-more i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.values .btn-read-more:hover i {
+  transform: translateX(5px);
+}
+
+.text-center {
+  text-align: center;
+}
 .values .row {
   display: flex; /* Use Flexbox for the row */
   justify-content: center; /* Center the card horizontally */
@@ -1150,7 +1185,7 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   height: 100%;
-  padding: 60px 30px;
+  padding: 60px 50px; /* Menambahkan lebar padding untuk memperlebar kotak */
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
@@ -1298,6 +1333,7 @@ section,
 .services .service-item:hover .icon {
   background: #fff;
 }
+
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -2803,4 +2839,41 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/* CSS untuk gambar di bagian goal-selection */
+#goal-selection .visual img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Batasi tinggi maksimal gambar */
+  display: block;
+  margin: 0 auto; /* Pusatkan gambar */
+}
+
+#goal-selection .visual {
+  text-align: center;
+}
+
+#making-plans .visual img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Batasi tinggi maksimal gambar */
+  display: block;
+  margin: 0 auto; /* Pusatkan gambar */
+}
+
+#making-plans .visual {
+  text-align: center;
+}
+
+#problem-solving .visual img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Batasi tinggi maksimal gambar */
+  display: block;
+  margin: 0 auto; /* Pusatkan gambar */
+}
+
+#problem-solving .visual {
+  text-align: center;
 }
