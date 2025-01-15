@@ -971,6 +971,10 @@ section,
   padding: 40px;
 }
 
+.gap {
+  margin-bottom: 120px; /* Anda dapat mengatur nilai ini sesuai dengan keinginan */
+}
+
 .about .content h3 {
   font-size: 14px;
   font-weight: 700;
@@ -1932,7 +1936,10 @@ section,
 .recent-posts .post-item:hover .post-img img {
   transform: scale(1.1);
 }
-
+.post-margin {
+  margin-top: 100px; /* Ubah angka sesuai kebutuhan */
+  margin-bottom: 50px; /* Ubah angka sesuai kebutuhan */
+}
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -2483,6 +2490,16 @@ section,
 .blog-details .meta-bottom .share i {
   padding-left: 5px;
 }
+
+.visual.center-img {
+  text-align: center;
+}
+
+.visual.center-img img {
+  margin: 30px auto;
+  display: block;
+}
+
 
 /*--------------------------------------------------------------
 # Blog Author Section
